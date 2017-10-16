@@ -100,8 +100,8 @@ open class MJDayView: MJComponentView {
         
         let isToday = self.todayDate.timeIntervalSince1970 == self.date.timeIntervalSince1970
         if isToday {
-            let underlineAttribute = [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue]
-            self.label.attributedText = NSAttributedString(string: text, attributes: underlineAttribute)
+            let fontAttribute = [ NSFontAttributeName: UIFont(name: "OpenSans-ExtraBold", size: 18)! ]
+            self.label.attributedText = NSAttributedString(string: text, attributes: fontAttribute)
         } else {
             self.label.attributedText = NSAttributedString(string: text)
         }
